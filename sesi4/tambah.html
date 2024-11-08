@@ -69,64 +69,83 @@
       </div>
     </nav>
     <div class="container-fluid">
-      <div class="row mt-2 mb-2">
-        <div class="col-md-6">
-          <h5>data karyawan</h5>
-        </div>
-        <div class="col-md-6">
-          <a href="tambah.html" class="btn btn-info float-end">
-            <i class="fa fa-plus"></i> tambah data
-          </a>
-        </div>
+      <div class="row mt-2">
+        <h5>tambah karyawan</h5>
+        <form action="">
+          <div class="mb-3">
+            <label for="nik">nik</label><br />
+            <input type="text" id="nik" name="nik" size="10" maxlength="10"
+            required placeholder="misal: 123"
+          </div>
+          <div class="mb-3">
+            <label for="nama">nama</label><br />
+            <input type="text" id="nama" name="nama" required
+            placeholder="misal: fulan"
+          </div>
+          <div class="mb-3">
+            <label for="tanggal_mulai">tanggal mulai</label><br />
+            <input type="date" id="tanggal_mulai" name="tanggal_mulai" required
+            min="2022-01-11"
+          </div>
+          <div class="mb-3">
+            <label for="gaji_pokok">gaji pokok</label><br />
+            <input type="number" id="gaji_pokok" name="gaji_pokok" required
+            min="1000000" step="1000"
+          </div>
+
+          <div class="mb-3">
+            <label for="">status karyawan</label><br />
+            <div class="form-check">
+              <input
+                type="radio"
+                id="tetap"
+                name="status_karyawan"
+                value="tetap"
+              />
+              <label for="tetap">tetap</label><br />
+            </div>
+            <div class="form-check">
+              <input
+                type="radio"
+                id="kontrak"
+                name="status_karyawan"
+                value="kontrak"
+              />
+              <label for="kontrak">kontrak</label><br />
+            </div>
+            <div class="form-check">
+              <input
+                type="radio"
+                id="magang"
+                name="status_karyawan"
+                value="magang"
+              />
+              <label for="magang">magang</label><br />
+            </div>
+
+            <button
+              type="submit"
+              class="btn btn-success"
+              name="btn_submit"
+              id="btn_submit"
+              value="submit"
+            >
+              <i class="fa fa-save"></i> submit
+            </button>
+            <button
+              type="reset"
+              class="btn btn-primary"
+              name="btn_reset"
+              id="btn_reset"
+              value="reset"
+            >
+              <i class="fa fa-arrows-rolate"></i> reset
+            </button>
+          </div>
+        </form>
       </div>
     </div>
-    <table class="table table-striped">
-      <tr>
-        <th>nik</th>
-        <th>nama karyawan</th>
-        <th>bagian</th>
-        <th style="width: 200px">opsi</th>
-      </tr>
-      <tr>
-        <td>0001</td>
-        <td>wachid</td>
-        <td>manager</td>
-        <td>
-          <button class="btn btn-primary">
-            <i class="fa fa-edit"></i>ubah
-          </button>
-          <button class="btn btn-danger">
-            <i class="fa fa-trash"></i>hapus
-          </button>
-        </td>
-      </tr>
-      <tr>
-        <td>002</td>
-        <td>dwi</td>
-        <td>hrd</td>
-        <td>
-          <button class="btn btn-primary">
-            <i class="fa fa-edit"></i>ubah
-          </button>
-          <button class="btn btn-danger">
-            <i class="fa fa-trash"></i>hapus
-          </button>
-        </td>
-      </tr>
-      <tr>
-        <td>003</td>
-        <td>trio</td>
-        <td>marketing</td>
-        <td>
-          <button class="btn btn-primary">
-            <i class="fa fa-edit"></i>ubah
-          </button>
-          <button class="btn btn-danger">
-            <i class="fa fa-trash"></i>hapus
-          </button>
-        </td>
-      </tr>
-    </table>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
